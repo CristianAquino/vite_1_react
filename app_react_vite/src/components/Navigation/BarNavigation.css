@@ -1,0 +1,52 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  padding: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  font-size: 16px;
+  color: #fff;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  font-size: 24px;
+  padding: 0 60px;
+}
+.logo a {
+  text-decoration: none;
+  color: #fff;
+}
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ul li {
+  list-style: none;
+  padding: 0 40px;
+  letter-spacing: 1.5px;
+}
+ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.input {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.input a {
+  text-decoration: none;
+  padding: 5px 20px;
+  border: 1px solid #1c00ff;
+  border-radius: 5px;
+}
