@@ -10,5 +10,8 @@ export const getProfile = (token) => {
       if (!res.ok) throw new Error("Error en el perfil");
       return res.json();
     })
-    .then((data) => data.user);
+    .then((data) => {
+      const { user } = data;
+      return user;
+    });
 };
