@@ -38,6 +38,9 @@ ul li a {
   text-decoration: none;
   color: #fff;
 }
+ul li a:hover {
+  color: var(--primary);
+}
 .input {
   height: 60px;
   display: flex;
@@ -47,6 +50,6 @@ ul li a {
 .input a {
   text-decoration: none;
   padding: 5px 20px;
-  border: 1px solid #1c00ff;
+  border: 1px solid var(--primary);
   border-radius: 5px;
 }
