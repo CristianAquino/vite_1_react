@@ -11,6 +11,7 @@ import { ProfileUser } from "./components/Profile/ProfileUser";
 
 import { ProtectedRoute } from "./routes/ProtectedRoute";
 import useAuth from "./hooks/useAuth";
+import { Card } from "./components/Card/Card";
 
 const App = () => {
   const { isLogged } = useAuth();
@@ -19,6 +20,7 @@ const App = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="card" element={<Card />} />
         <Route element={<ProtectedRoute isLogged={!isLogged} />}>
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
