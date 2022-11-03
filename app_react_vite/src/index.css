@@ -5,20 +5,22 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
   --primary: #1363fe;
+  --black-primary: #242424;
+  --black-secondary: #333;
+  --color-letter: #fff;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  padding: 64px 64px 0;
+  background-color: var(--black-primary);
 }
