@@ -4,6 +4,7 @@ import useAuth from "../../hooks/useAuth";
 import useProfile from "../../hooks/useProfile";
 import { useContext, useEffect } from "react";
 import { authContext } from "../../provider/AuthProvider";
+import { FaBars } from "react-icons/fa";
 
 export const BarNavigation = () => {
   const { isLogged, logout } = useAuth();
@@ -22,15 +23,12 @@ export const BarNavigation = () => {
           <span>LOGO</span>
         </Link>
       </div>
-      <ul>
+      <ul className="nav_list">
         <li>
           <Link to={"/"}>Home</Link>
         </li>
         <li>
           <Link to={"/about"}>About</Link>
-        </li>
-        <li>
-          <Link to={"/card"}>Card</Link>
         </li>
         {isLogged && (
           <li>
@@ -38,16 +36,17 @@ export const BarNavigation = () => {
           </li>
         )}
       </ul>
-      {isLogged ? (
-        <div className="input">
-          <p>Bienvenido {profile?.username}</p>
-          <button onClick={logout}>Logout</button>
-        </div>
-      ) : (
-        <div className="input">
-          <Link to={"/login"}>Login</Link>
-        </div>
-      )}
+      <div className="button_user">
+        {isLogged ? (
+          <>
+            <p>Bienvenido {profile?.username}</p>
+            <button onClick={logout}>Logout</button>
+          </>
+        ) : (
+          <Link to={"/login"}>Acceder</Link>
+        )}
+      </div>
+      <FaBars className="menu" />
     </nav>
   );
 };
