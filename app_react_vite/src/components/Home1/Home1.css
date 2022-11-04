@@ -1,0 +1,10 @@
+.home1 {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+@media (max-width: 768px) {
+  .home1 {
+    grid-template-columns: 1fr;
+  }
+}
