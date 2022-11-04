@@ -1,0 +1,11 @@
+.layout_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-template-rows: minmax(320px, 400px);
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  .layout_cards {
+    width: 100%;
+  }
+}
