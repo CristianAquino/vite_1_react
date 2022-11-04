@@ -4,7 +4,7 @@ import useAuth from "../../hooks/useAuth";
 import useProfile from "../../hooks/useProfile";
 import { useContext, useEffect } from "react";
 import { authContext } from "../../provider/AuthProvider";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaRegUserCircle } from "react-icons/fa";
 
 export const BarNavigation = () => {
   const { isLogged, logout } = useAuth();
@@ -43,7 +43,11 @@ export const BarNavigation = () => {
             <button onClick={logout}>Logout</button>
           </>
         ) : (
-          <Link to={"/login"}>Acceder</Link>
+          <Link to={"/login"}>
+            {" "}
+            <FaRegUserCircle />
+            Acceder
+          </Link>
         )}
       </div>
       <FaBars className="menu" />

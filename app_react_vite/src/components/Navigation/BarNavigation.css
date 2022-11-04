@@ -28,6 +28,7 @@
 .nav_list li {
   list-style: none;
   letter-spacing: 1.5px;
+  font-size: 20px;
 }
 .nav_list li a {
   text-decoration: none;
@@ -43,8 +44,17 @@
   align-items: center;
 }
 .button_user a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   padding: 4px 20px;
+  color: var(--primary);
+  gap: 8px;
+  transition: 0.5s;
+  font-size: 20px;
+}
+.button_user a:hover {
   border: 1px solid var(--primary);
   border-radius: 4px;
 }
