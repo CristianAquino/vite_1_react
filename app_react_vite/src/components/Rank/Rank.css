@@ -1,0 +1,52 @@
+.rank {
+  display: flex;
+  height: 120px;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: var(--color-letter);
+  gap: 16px;
+}
+.rank .number {
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+.rank .number:hover {
+  color: var(--primary);
+  transform: scale(1.5);
+}
+.rank_img {
+  position: relative;
+  width: 96px;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.rank_img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  object-position: top left;
+}
+.rank .rank_data {
+  padding: 8px 0;
+  overflow: hidden;
+  width: calc(100% - 160px);
+}
+.rank .rank_data p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.rank .rank_data span {
+  display: flex;
+  align-items: center;
+  line-height: 2.5;
+  gap: 8px;
+}
