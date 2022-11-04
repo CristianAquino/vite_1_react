@@ -1,5 +1,10 @@
+.ranking {
+  background-color: #333;
+}
 @media (max-width: 768px) {
   .ranking {
     width: 100%;
+    padding-top: 16px;
+    padding-left: 0;
   }
 }
