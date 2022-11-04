@@ -1,12 +1,10 @@
 .card {
   position: relative;
-  width: 150px;
-  height: 300px;
 }
 .card_img {
   position: relative;
-  width: 150px;
-  height: 200px;
+  width: 100%;
+  height: 280px;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -17,20 +15,22 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top left;
 }
 .card .card_body {
-  padding: 4px 0;
-  font-size: 14px;
-  width: 150px;
+  padding: 8px 0;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
 }
 .card .card_body .titulo {
-  left: 0;
-  padding: 4px 0;
-  max-height: 38px;
-  text-align: left;
+  /* left: 0; */
+  padding: 8px 0;
+  max-height: 48px;
+  /* text-align: left; */
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -38,21 +38,21 @@
   -webkit-box-orient: vertical;
 }
 .card .card_body a {
-  width: 150px;
-  padding: 4px 0;
+  width: 100%;
+  padding: 8px 0;
   text-decoration: none;
 }
 .card .card_body .chapter {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 11px;
-  width: 150px;
+  font-size: 12px;
+  width: 100%;
 }
 .card .card_body .chapter :first-child {
   color: var(--primary);
   border: 1px solid var(--primary);
-  padding: 1px 3px;
+  padding: 1px 4px;
   border-radius: 5px;
 }
 .card .card_body .new :last-child {
