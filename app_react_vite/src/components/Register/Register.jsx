@@ -30,20 +30,35 @@ export const Register = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
             type="text"
+            placeholder="username"
             {...register("username", {
-              required: { value: true },
+              required: { value: "username requerido" },
             })}
           />
           <input
             type="text"
+            placeholder="email"
             {...register("email", {
-              required: { value: true },
+              required: { value: "email requerido" },
+              pattern: {
+                value: /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/,
+              },
             })}
           />
           <input
             type="password"
+            placeholder="password"
             {...register("password", {
-              required: { value: true },
+              required: { value: "password requerido" },
+              minLength: {
+                value: 8,
+                message: "La longitud tiene que ser como minimo de 8",
+              },
+              pattern: {
+                value:
+                  /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/,
+                message: "Debe incluir un caracter",
+              },
             })}
           />
           {errors.password && <span>password es requerido</span>}
