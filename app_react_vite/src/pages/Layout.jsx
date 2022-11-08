@@ -5,7 +5,7 @@ export const Layout = () => {
   return (
     <>
       <BarNavigation />
-      <main>
+      <main style={{ width: "100%" }}>
         <Outlet />
       </main>
     </>
