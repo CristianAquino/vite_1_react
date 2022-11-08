@@ -1,22 +1,19 @@
-import { useContext, useEffect, useState } from "react";
-import { getProfile } from "../../https/getProfile";
-import { authContext } from "../../provider/AuthProvider";
+import useProfile from "../../hooks/useProfile";
 
 export const ProfileUser = () => {
-  const [profile, setProfile] = useState(null);
-  const { token } = useContext(authContext);
-
-  useEffect(() => {
-    getProfile(token)
-      .then((profile) => setProfile(profile))
-      .catch((error) => console.log(error));
-  }, []);
+  const { profile } = useProfile();
 
   console.log(profile);
   return (
     <>
       <h1>{profile?.username}</h1>
       <h1>{profile?.email}</h1>
+      <h1>Roles:</h1>
+      <ul>
+        {profile?.roles.map((rol) => (
+          <li key={rol.name}>{rol.name}</li>
+        ))}
+      </ul>
     </>
   );
 };
