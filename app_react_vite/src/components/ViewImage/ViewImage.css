@@ -1,0 +1,8 @@
+.view_img {
+  max-width: 1080px;
+  position: relative;
+  /* filter: saturate(1.5); */
+}
+.view_img img {
+  width: 100%;
+}
