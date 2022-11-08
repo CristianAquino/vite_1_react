@@ -20,6 +20,7 @@ export const Login = () => {
   const onSubmit = (values) => {
     login(values);
   };
+  // https://react-hook-form.com/api/useform/register
 
   return (
     <>
@@ -30,12 +31,14 @@ export const Login = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
             type="text"
+            placeholder="email"
             {...register("email", {
               required: { value: true },
             })}
           />
           <input
             type="password"
+            placeholder="password"
             {...register("password", {
               required: { value: true },
             })}
